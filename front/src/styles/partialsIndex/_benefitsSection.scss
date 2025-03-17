@@ -1,0 +1,57 @@
+.benefits-section {
+    display: flex;
+    gap: 20px;
+    background-color: #ddcabc;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 100px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-icon {
+    background-color: #5A2B68;
+}
+
+.discount-icon {
+    background-color: #E88C89;
+}
+
+.user-icon {
+    background-color: #008D8A;
+}
+
+.heart-icon {
+    background-color: #F7D469;
+}
+
+.benefit-icon img {
+    width: 60%;
+}
+
+.benefit-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+}
