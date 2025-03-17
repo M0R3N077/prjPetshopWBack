@@ -1,0 +1,43 @@
+header{
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.list{
+    display:flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+}
+
+    .list li{
+        cursor: pointer;
+    }
+
+#left-header-list{
+    margin-left: 40px;
+}
+
+#right-header-list{
+    margin-right: 120px;
+}
+
+.logo{
+    width: 330px;
+}
+
+#services{
+font-size: 31px;
+}
+
+#favorites{
+    margin-right: 20px;
+}
