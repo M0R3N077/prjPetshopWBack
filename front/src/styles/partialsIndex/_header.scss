@@ -1,47 +1,66 @@
 header{
     background: transparent;
-    display: flex;
-    flex-direction: row;
     position: absolute;
     z-index: 100;
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 170px;
 }
 
-.list{
+#header-list{
     display:flex;
     flex-direction: row;
-    gap: 40px;
-    justify-content: center;
+    gap: 100px;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
     color: white;
-}
-
-    .list li{
-        cursor: pointer;
-    }
-
-#left-header-list{
+    margin-right: 120px;
     margin-left: 40px;
 }
 
-#right-header-list{
-    margin-right: 120px;
-}
+    #header-list li{
+        cursor: pointer;
+    }
 
 .logo{
-    width: 330px;
+    width: 380px;
+  margin-bottom: 20px;
 }
 
-#services{
-font-size: 20px;
-font-family: 'Chewy';
-font-weight: 200;
-letter-spacing: 2px;
+.elements-list{
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    letter-spacing: 2px;
+
 }
 
-#favorites{
-    margin-right: 20px;
+#header-icons{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    color: white;
+}
+
+#header-icons > * {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#header-icons > *:hover {
+    transform: scale(1.2);
+}
+
+#header-list li {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#header-list li:hover {
+    transform: scale(1.2);
 }
 

@@ -11,49 +11,67 @@ li {
 
 header {
   background: transparent;
-  display: flex;
-  flex-direction: row;
   position: absolute;
   z-index: 100;
   width: 100%;
-  justify-content: space-between;
-}
-
-.list {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  height: 170px;
+}
+
+#header-list {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-}
-
-.list li {
-  cursor: pointer;
-}
-
-#left-header-list {
+  margin-right: 120px;
   margin-left: 40px;
 }
 
-#right-header-list {
-  margin-right: 120px;
+#header-list li {
+  cursor: pointer;
 }
 
 .logo {
-  width: 330px;
+  width: 380px;
+  margin-bottom: 20px;
 }
 
-#services {
+.elements-list {
   font-size: 20px;
-  font-family: "Chewy";
-  font-weight: 200;
+  font-family: "Poppins";
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
-#favorites {
-  margin-right: 20px;
+#header-icons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  color: white;
+}
+
+#header-icons > * {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#header-icons > *:hover {
+  transform: scale(1.2);
+}
+
+#header-list li {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#header-list li:hover {
+  transform: scale(1.2);
 }
 
 .hero-section {
@@ -74,6 +92,7 @@ header {
   height: 100vh;
   overflow: hidden;
   z-index: -1;
+  box-shadow: inset 0 -200px 200px rgba(0, 0, 0, 0.85); /* sombra mais escura e profunda na parte inferior */
 }
 
 .hero-video video {
@@ -100,10 +119,11 @@ header {
   color: white;
 }
 
-#hero-title {
-  font-size: 22px;
-  font-family: "Lemon";
-  font-weight: 400;
+.hero-content h1 {
+  font-family: "Bree Serif";
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: 1px;
 }
 
 #hero-text {
@@ -339,12 +359,12 @@ header {
 }
 .benefits-section {
   display: flex;
-  gap: 20px;
-  background-color: #ddcabc;
+  gap: 60px;
+  background-color: #fdf3e7;
   min-height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .benefit-item {
@@ -355,11 +375,18 @@ header {
   border-radius: 30px;
   padding: 10px 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.benefit-item:hover {
+  transform: scale(1.09);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-icon {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -389,8 +416,65 @@ header {
 .benefit-text {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   margin-left: 10px;
   color: black;
+}
+
+#location {
+  width: 100px;
+  height: 70px;
+}
+
+#money {
+  width: 90px;
+  height: 70px;
+}
+
+#heart {
+  width: 70px;
+  height: 60px;
+}
+
+#people {
+  width: 55px;
+  height: 55px;
+}
+
+.who-are-we {
+  min-height: 100vh;
+  background-color: #015649;
+}
+
+.content-we {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-img-we img {
+  width: 620px;
+}
+
+.content-text-we {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  color: white;
+}
+
+.title-text-we {
+  text-align: center;
+  font-size: 30px;
+}
+
+.paragraph-text-we {
+  font-size: 27px;
+  margin-top: 20px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

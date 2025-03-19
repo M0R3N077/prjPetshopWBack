@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <ul id="left-header-list" class="list">
-        <li ><img class="logo" src="./assets/imgs/logoPeshop.png" alt="Logo do petshop"></li>
-        <li id="services">SERVIÇOS</li>
-    </ul>
-    <ul id="right-header-list" class="list">
-        <li id="favorites"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+    <ul id="header-list">
+        <li ><img class="logo" src="./assets/imgs/logoPetshop.png" alt="Logo do petshop"></li>
+        <li class="elements-list">SOBRE NÓS</li>
+        <li class="elements-list">PRODUTOS</li>
+        <li class="elements-list">SERVIÇOS</li>
+        </ul>
+        <ul id="header-icons">
+        <li class="elements-list-icons" id="profile"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
           </svg></li>
-        <li id="shopping"> <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <li class="elements-list-icons" id="fvorites" ><svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"  fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+          </svg></li>
+        <li class="elements-list-icons"  id="shopping"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
           </svg></li>
+        </div>
     </ul>
 </header>
 
@@ -51,34 +57,34 @@
 <section class="benefits-section">
     <div class="benefit-item">
         <div class="benefit-icon location-icon">
-            <img src="location-icon.svg" alt="Ícone de Localização">
+            <img id="location" src="./assets/imgs/imgsBenefits/location.png" alt="Ícone de Localização">
         </div>
         <p class="benefit-text">SÓ NA <br> PET HEAVEN</p>
     </div>
 
     <div class="benefit-item">
         <div class="benefit-icon discount-icon">
-            <img src="discount-icon.svg" alt="Ícone de Desconto">
+            <img id="money" src="./assets/imgs/imgsBenefits/money.png" alt="Ícone de Desconto">
         </div>
         <p class="benefit-text">PROMOÇÕES</p>
     </div>
 
     <div class="benefit-item">
         <div class="benefit-icon user-icon">
-            <img src="user-icon.svg" alt="Ícone de Usuário">
+            <img id="people" src="./assets/imgs/imgsBenefits/people.png" alt="Ícone de Usuário">
         </div>
         <p class="benefit-text">PARA VOCÊ</p>
     </div>
 
     <div class="benefit-item">
         <div class="benefit-icon heart-icon">
-            <img src="heart-icon.svg" alt="Ícone de Coração">
+            <img id="heart" src="./assets/imgs/imgsBenefits/heart.png" alt="Ícone de Coração">
         </div>
         <p class="benefit-text">PET HEAVEN <br> CUIDA</p>
     </div>
 </section>
 
-<section class="container swiper">
+<!-- <section class="container swiper">
     <div class="slider-wrapper">
         <div class="card-list swiper-wrapper">
             <div class="card-item swiper-slide">
@@ -141,15 +147,31 @@
                         <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
                     </svg>
             </div>
-        </div>
-        <div class="swiper-pagination"></div>
+        </div> -->
+        <!-- <div class="swiper-pagination"></div>
         <button class="swiper-slide-button swiper-button-prev"></button>
         <button class="swiper-slide-button swiper-button-next"></button>
+    </div> -->
+</section>
+
+<section class="who-are-we">
+    <div class="content-we">
+        <div class="content-img-we">
+            <img src="./assets/imgs/imgWhoAreWe.png" alt="">
+        </div>
+        <div class="content-text-we">
+            <div class="title-text-we">
+                <h2>Quem somos?</h2>
+            </div>
+            <div class="paragraph-text-we">
+                <p>Na Pet Heaven, acreditamos que seu pet merece o melhor! Desde nossa fundação em 2020, nos dedicamos a oferecer produtos e serviços de alta qualidade para garantir o bem-estar, saúde e felicidade dos animais de estimação. Com o slogan "O melhor para o seu pet", nos tornamos referência no mercado, priorizando o cuidado, o carinho e a satisfação dos nossos clientes de quatro patas e seus tutores. Na Pet Heaven, cada detalhe é pensado com amor e responsabilidade, porque sabemos que os pets são parte da família. Venha nos conhecer e descubra por que somos o paraíso que seu pet merece!</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" d></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
-<script src="./src/scripts/index.js"></script>
+<script src="../src/scripts/index.js"></script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 .benefits-section {
     display: flex;
-    gap: 20px;
-    background-color: #ddcabc;
+    gap: 60px;
+    // background: linear-gradient(180deg, #040501 0%,  #015649 100%);
+    background-color: #fdf3e7;
     min-height: 50vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
+
 
 .benefit-item {
     display: flex;
@@ -16,11 +18,18 @@
     border-radius: 30px;
     padding: 10px 15px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.benefit-item:hover {
+    transform: scale(1.09);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-icon {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -50,8 +59,28 @@
 .benefit-text {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     margin-left: 10px;
     color: black;
+}
+
+#location {
+    width: 100px;
+    height: 70px;
+}
+
+#money {
+    width: 90px;
+    height: 70px;
+}
+
+#heart {
+    width: 70px;
+    height: 60px;
+}
+
+#people{
+    width: 55px;
+    height: 55px;
 }

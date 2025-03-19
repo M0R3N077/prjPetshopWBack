@@ -1,0 +1,36 @@
+.who-are-we{
+    min-height: 100vh;
+    background-color: #015649;
+}
+
+.content-we{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;    
+}
+
+.content-img-we img{
+    width: 620px;
+}
+
+.content-text-we{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    color: white;
+}
+
+.title-text-we{
+    text-align: center;
+    font-size: 30px;
+}
+
+.paragraph-text-we{
+    font-size: 27px;
+    margin-top: 20px;
+    text-align: center;
+}
