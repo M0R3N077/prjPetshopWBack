@@ -1,0 +1,153 @@
+#login-body {
+    font-family: 'Inter', sans-serif;
+    background-color: #00574B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1000px;
+  
+  
+  h2 {
+    color: #00574B;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+}
+  
+  #title-scheduling {
+    font-family: 'Bree Serif', serif;
+    font-weight: 700;
+    color: #00574B;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 35px;
+  }
+
+  .form-horizontal {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .calendar-section {
+    width: 50%;
+  }
+  .month-selector {
+    text-align: center;
+    color: #00574B;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  .calendar {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  .calendar th, .calendar td {
+    color: #00574B;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .calendar .selectable-date:hover {
+    background-color: #D0E3D4;
+    border-radius: 50%;
+  }
+  .calendar .selected-date {
+    background-color: #00574B;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .form-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.time-slot-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #004734;
+    border-radius: 8px;
+    padding: 7px 0;
+    width: 100%;
+    max-width: 290px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 500;
+    color: #004038;
+}
+
+.time-slot-btn:hover {
+    background-color: #004734;
+    color: white;
+}
+  .time-slot-btn.selected {
+    background-color: #00574B;
+    color: white;
+  }
+  .service-input, #service-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00574B;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #00574B;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  .confirm-area {
+    text-align: center;
+  }
+  #selected-info {
+    color: #00574B;
+    margin-bottom: 10px;
+  }
+  .submit-btn {
+    background-color: #00574B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .submit-btn:hover {
+    background-color: #004038;
+  }
+  
+  .time-title{
+    color: #004038;
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 500;
+  }

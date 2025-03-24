@@ -1,0 +1,82 @@
+#body-page {
+    background-color: #0B4F3D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+#logo-paw {
+    width: 150px; 
+    position: absolute;
+    top: 105px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#form-container {
+    margin-top: 20px;
+    background-color: #FAF3E3;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 500px; 
+    min-height: 200px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#form-title {
+    color: #134A3A;
+    font-family: 'Bree Serif', serif;
+    font-weight: 700;
+    font-size: 50px; 
+}
+
+#group-owner-name,#group-pet-name {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#label-owner-name,#label-password {
+    display: block;
+    color: #134A3A;
+    font-weight: 600;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+#owner-name,#pet-name {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #134A3A;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    height: 50px;
+}
+
+#register-link-container {
+    width: 100%;
+    text-align: right;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+#register-link-container a {
+    text-decoration: none;
+    color: #134A3A;
+}
+
+#register-link-container a:hover {
+    text-decoration: underline;
+}
