@@ -1,12 +1,15 @@
 .carousel {
+    position: fixed;
+    right: 5%;
+    transform: translateY(-50%);
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* 🔹 Inverte os elementos para o carrossel ficar à direita */
+    align-items: center;
     justify-content: space-between;
-    background: #015649;
-    overflow-x: hidden; 
-    font-family: Arial, sans-serif;
-    position: relative;
+    opacity: 0;  /* 🔹 Inicialmente invisível */
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-imgs {
@@ -56,21 +59,31 @@
 
 /*content*/
 .content-carousel {
-    margin-left: 100px;
+    padding-left: 100px;
     display: flex;
     flex-direction: column;
+    background-color: #015649;
 }
 
 .bath-grooming {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
     color: white;
-    font-size: 20px;
+    width: 900px;
 }
 
+.title{
+    color: #fff;
+    line-height: 0.83;
+}
+
+.paragraph{
+    font-size: 20px;
+    letter-spacing: 0;
+}
 
 .btn{
     display: flex;
@@ -79,11 +92,12 @@
 }
 
 .btn-scheduling{
-    height: 50px;
+    height: 60px;
     border-radius: 30px;
     width: 250px;
     text-align: center;
-    background-color: #f4a0c7;
+    background-color: #eeb3e7;
     color: white;
-    font-size: 20px;
+    font-size: 23px;
+    border: none;
 }

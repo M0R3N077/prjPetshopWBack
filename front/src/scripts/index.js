@@ -1,52 +1,53 @@
-// Seleciona os elementos
-const carouselImgs = document.querySelector('.carousel-imgs');
-const carousel = document.querySelector('.carousel');
-const images = document.querySelectorAll('.carousel-imgs .image-wrapper'); // Selecione as imagens individuais
+const carousel = document.querySelector(".carousel");
+const triggerSection = document.querySelector(".content-carousel");
+const sections = document.querySelectorAll(".bath-grooming");
 
-// Cria o Intersection Observer
-const observerr = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting) {
-      // Torna o elemento fixo quando o carousel estiver visível
-      carouselImgs.classList.add('fixed');
-    } else {
-      // Remove o comportamento fixo quando o carousel sair da tela
-      carouselImgs.classList.remove('fixed');
-    }
-  },
-  {
-    threshold: 0.5,  // O 'carousel' precisa estar 50% visível para ativar
-  }
-);
+let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+let lastChangeTime = 0;
+let delayTimer;
 
-// Para cada imagem dentro do carousel, aplica a lógica de fixação
-images.forEach(image => {
-  observerr.observe(image);
-});
-
-// Começa a observar o elemento carousel
-observerr.observe(carousel);
-
-
-//gsap
-const carouselSection = document.querySelector(".carousel");
-const carouselImages = document.querySelector(".carousel-imgs");
-
-let lastScrollTop = 0; // Armazena a última posição do scroll
+// 🔹 Novo Observer com threshold ajustado
 let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
+        console.log("🔍 Entrando na seção?", entry.isIntersecting); // 🔥 Depuração
+
         if (entry.isIntersecting) {
-            gsap.to(carouselImages, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out" });
+            clearTimeout(delayTimer); // 🔥 Evita múltiplas execuções acumuladas
+            delayTimer = setTimeout(() => {
+                gsap.to(carousel, { opacity: 1, duration: 0.2, ease: "power2.out" });
+                carousel.style.pointerEvents = "auto";
+            }, 0); // 🔥 Pequeno atraso antes de aparecer (300ms)
         } else {
-            gsap.to(carouselImages, { opacity: 0, scale: 0.8, filter: "blur(10px)", duration: 0.8, ease: "power2.inOut" });
+            // 🔥 Some imediatamente ao sair da seção
+            gsap.to(carousel, { opacity: 0, duration: 0, ease: "power2.in" });
+            carousel.style.pointerEvents = "none";
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0.2 }); // 🔥 Menos sensível para ativar, mas some rápido
 
-observer.observe(carouselSection);
+observer.observe(triggerSection);
 
-let sections = document.querySelectorAll(".bath-grooming");
-let observerSections = new IntersectionObserver(handleIntersection, { threshold: 0.6 });
+// 🔹 Evento manual de scroll para garantir o desaparecimento imediato
+window.addEventListener("scroll", () => {
+    const rect = triggerSection.getBoundingClientRect();
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    let isScrollingDown = scrollTop > lastScrollTop;
+    lastScrollTop = scrollTop;
+
+    if (rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.3) {
+        clearTimeout(delayTimer);
+        delayTimer = setTimeout(() => {
+            carousel.style.opacity = "1";
+            carousel.style.pointerEvents = "auto";
+        }, 300); // 🔥 Atraso ao aparecer
+    } else {
+        gsap.to(carousel, { opacity: 0, duration: isScrollingDown ? 0.6 : 0.3, ease: "power2.in" });
+        carousel.style.pointerEvents = "none";
+    }
+});
+
+// 🔹 Observer para alternar imagens no carrossel
+let observerSections = new IntersectionObserver(handleIntersection, { threshold: 0.8 });
 
 sections.forEach(section => observerSections.observe(section));
 
@@ -54,10 +55,10 @@ function handleIntersection(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             let scrollTop = window.scrollY || document.documentElement.scrollTop;
-            let isScrollingDown = scrollTop > lastScrollTop; // Verifica se está descendo
-            lastScrollTop = scrollTop; // Atualiza a posição do scroll
+            let isScrollingDown = scrollTop > lastScrollTop;
+            lastScrollTop = scrollTop;
 
-            rotateImages(isScrollingDown); // Chama a função passando a direção do scroll
+            rotateImages(isScrollingDown);
         }
     });
 }
@@ -67,12 +68,12 @@ function rotateImages(isScrollingDown) {
     const carousel = document.querySelector(".carousel-imgs");
 
     if (isScrollingDown) {
-        carousel.appendChild(images[0]); // Move a primeira imagem para o final (scroll para baixo)
+        carousel.appendChild(images[0]); // 🔹 Move a PRIMEIRA imagem para o final (scroll para baixo)
     } else {
-        carousel.insertBefore(images[images.length - 1], images[0]); // Move a última imagem para o início (scroll para cima)
+        carousel.insertBefore(images[images.length - 1], images[0]); // 🔹 Move a ÚLTIMA imagem para o início (scroll para cima)
     }
 
-    setTimeout(updateClasses, 50);
+    updateClasses();
 }
 
 function updateClasses() {
@@ -88,12 +89,18 @@ function updateClasses() {
 }
 
 function applyAnimations() {
-    gsap.to(".top", { x: "0%", y: "-120%", scale: 0.9, opacity: 0.7, duration: 0.8 });
-    gsap.to(".middle", { x: "-300px", y: "0%", scale: 2.5, opacity: 1, duration: 0.8 }); // Somente a do meio desloca
-    gsap.to(".bottom", { x: "0%", y: "120%", scale: 0.9, opacity: 0.7, duration: 0.8 });
+    gsap.to(".top", { x: "0%", y: "-120%", scale: 0.9, opacity: 0.7, duration: 0.5, ease: "power2.out" });
+    gsap.to(".middle", { x: "-250px", y: "0%", scale: 2.2, opacity: 1, duration: 0.5, ease: "power2.out" });
+    gsap.to(".bottom", { x: "0%", y: "120%", scale: 0.9, opacity: 0.7, duration: 0.5, ease: "power2.out" });
 }
 
 
-
-
+// flip cards
+const cards = document.querySelectorAll('.card-wrapper');
   
+  cards.forEach((card, index) => {
+    // Add delay based on card index
+    setTimeout(() => {
+      card.style.opacity = '1';
+    }, 100 * index);
+  });

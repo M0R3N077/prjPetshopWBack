@@ -1,0 +1,182 @@
+.products {
+    background-color: #fdf3e7;
+    color: #333;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Page title */
+  .page-title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-left: 150px;
+  }
+  
+  /* Card grid layout */
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card-wrapper {
+    flex: 1;
+    min-width: 430px;
+    height: 400px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Flip card container */
+  .flip-card-container {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+  }
+  
+  .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card-front, 
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+  }
+  
+  /* Front of card */
+  .flip-card-front {
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 40%);
+    background-size: 300%;
+  }
+
+  #food {
+    background-image: url('/front/public/assets/imgs/cardsProducts/food.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+  #toys{
+    background-image: url('/front/public/assets/imgs/cardsProducts/toys.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #home{
+    background-image: url('/front/public/assets/imgs/cardsProducts/house.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #clean{
+    background-image: url('/front/public/assets/imgs/cardsProducts/clean.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #vet{
+    background-image: url('/front/public/assets/imgs/cardsProducts/vet.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Back of card */
+  .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: rotateY(180deg);
+  }
+  
+  /* Card content styling */
+  .card-title {
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: white !important;
+    font-size: 2rem !important;
+  }
+  
+  .card-description {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Flip on hover */
+  .flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .second-row {
+      justify-content: center;
+    }
+    
+    .second-row .card-wrapper {
+      flex: 0 0 calc(50% - 0.75rem);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .card-wrapper {
+      flex: 0 0 100%;
+    }
+    
+    .page-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }

@@ -17,6 +17,22 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+    <div class="carousel">
+        <div class="gsap-imgs">
+        <div class="carousel-imgs">
+            <div class="image-wrapper top">
+                <img src="./assets/imgs/imgsCarousel/pet1.png" alt="Imagem 1">
+            </div>
+            <div class="image-wrapper middle">
+                <img src="./assets/imgs/imgsCarousel/pet2.png" alt="Imagem 2">
+            </div>
+            <div class="image-wrapper bottom">
+                <img src="./assets/imgs/imgsCarousel/pet3.png" alt="Imagem 3">
+            </div>
+        </div>
+    </div>
+    </div>
+    
 <header>
     <ul id="header-list">
         <li ><img class="logo" src="./assets/imgs/logoPetshop.png" alt="Logo do petshop"></li>
@@ -102,28 +118,14 @@
     </div>
 </section>
 
-<section class="carousel">
-    <div class="gsap-imgs">
-    <div class="carousel-imgs">
-        <div class="image-wrapper top">
-            <img src="./assets/imgs/imgsCarousel/pet1.png" alt="Imagem 1">
-        </div>
-        <div class="image-wrapper middle">
-            <img src="./assets/imgs/imgsCarousel/pet2.png" alt="Imagem 2">
-        </div>
-        <div class="image-wrapper bottom">
-            <img src="./assets/imgs/imgsCarousel/pet3.png" alt="Imagem 3">
-        </div>
-    </div>
-</div>
 
 <section class="content-carousel">
     <div class="bath-grooming">
         <div class="content-text-we">
-            <div class="title-text-we">
+            <div class="title-text-we title">
                 <h2>Banho e Tosa</h2>
             </div>
-            <div class="paragraph-text-we">
+            <div class="paragraph-text-we paragraph">
                 <p>No nosso pet shop, o serviço de banho é feito com todo o cuidado e carinho que o seu pet merece! Utilizamos produtos de alta qualidade, específicos para cada tipo de pelagem e necessidade, garantindo uma limpeza profunda e segura. Nossa equipe é treinada para oferecer um atendimento personalizado, desde o banho relaxante até a secagem adequada, deixando seu amiguinho cheiroso, macio e super confortável. Além disso, oferecemos serviços extras como hidratação, tosa higiênica e cortes especiais. Traga seu pet para uma experiência de spa completa!</p>
             </div>
             <div class="btn">
@@ -133,11 +135,11 @@
     </div>
 
     <div class="bath-grooming">
-        <div class="content-text-we">
-            <div class="title-text-we">
+        <div class="content-text-we" id="content-bath">
+            <div class="title-text-we title">
                 <h2>Hospedagem</h2>
             </div>
-            <div class="paragraph-text-we">
+            <div class="paragraph-text-we paragraph">
                 <p>Para os momentos em que você precisar se ausentar, o Pet Heaven oferece um serviço de hospedagem seguro e confortável para cães e gatos. Nossas instalações são climatizadas e monitoradas 24 horas por dia, garantindo o bem-estar do seu pet. Oferecemos passeios diários, alimentação personalizada e cuidados especiais para pets idosos ou com necessidades específicas. Aqui, seu pet será tratado com todo o carinho e atenção, como se estivesse em casa.</p>
             </div>
             <div class="btn">
@@ -148,10 +150,10 @@
 
     <div class="bath-grooming">
         <div class="content-text-we">
-            <div class="title-text-we">
+            <div class="title-text-we title">
                 <h2>Venda de produtos</h2>
             </div>
-            <div class="paragraph-text-we">
+            <div class="paragraph-text-we paragraph">
                 <p>Em nossa loja, você encontrará uma variedade de produtos de alta qualidade para atender todas as necessidades do seu pet. Trabalhamos com rações premium e super premium, petiscos saudáveis, brinquedos, coleiras, roupas, acessórios e produtos de higiene e beleza. Além disso, temos medicamentos e suplementos veterinários, garantindo que você encontre tudo o que precisa para cuidar do seu companheiro em um só lugar.</p>
             </div>
             <div class="btn">
@@ -162,10 +164,10 @@
 
     <div class="bath-grooming">
         <div class="content-text-we">
-            <div class="title-text-we">
+            <div class="title-text-we title">
                 <h2>Cuidados Veterinários</h2>
             </div>
-            <div class="paragraph-text-we">
+            <div class="paragraph-text-we paragraph">
                 <p>O Pet Heaven também conta com uma equipe de profissionais dedicados à saúde e bem-estar do seu pet. Oferecemos consultas de rotina, vacinação, vermifugação, exames laboratoriais e de imagem, microchipagem e atendimento emergencial. Realizamos cirurgias e procedimentos veterinários, além de fornecer acompanhamento pós-operatório. Nosso objetivo é garantir que seu pet receba os melhores cuidados, desde a prevenção até o tratamento de doenças.</p>
             </div>
             <div class="btn">
@@ -174,9 +176,87 @@
         </div>
     </div>
 </section>
+
+<section class="products">
+<div class="container">
+    <h1 class="page-title">Produtos</h1>
+    <div class="cards-container">
+      <div class="cards-row">
+        <div class="card-wrapper">
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front" id="food" style="background-position: 0% 30%;">
+                <h2 class="card-title">Alimentação</h2>
+              </div>
+              <div class="flip-card-back">
+                <h2 class="card-title">Alimentação</h2>
+                <p class="card-description">Produtos de alta qualidade para a alimentação do seu pet, com nutrientes essenciais para saúde e bem-estar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-wrapper">
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front" id="toys" style="background-position: 33% 30%;">
+                <h2 class="card-title">Brinquedos</h2>
+              </div>
+              <div class="flip-card-back">
+                <h2 class="card-title">Brinquedos</h2>
+                <p class="card-description">Brinquedos divertidos e seguros para entreter seu pet e estimular sua atividade física e mental.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-wrapper">
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front" id="home" style="background-position: 66% 30%;">
+                <h2 class="card-title">Casinhas e aquários</h2>
+              </div>
+              <div class="flip-card-back">
+                <h2 class="card-title">Casinhas e aquários</h2>
+                <p class="card-description">Ambientes confortáveis e seguros para seu pet, projetados com os melhores materiais e acabamentos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cards-row second-row">
+        <div class="card-wrapper">
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front" id="clean" style="background-position: 17% 75%;">
+                <h2 class="card-title">Higiene e limpeza</h2>
+              </div>
+              <div class="flip-card-back">
+                <h2 class="card-title">Higiene e limpeza</h2>
+                <p class="card-description">Produtos especializados para manter seu pet limpo e saudável, com fórmulas suaves e eficientes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-wrapper">
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front" id="vet" style="background-position: 66% 75%;">
+                <h2 class="card-title">Medicina Veterinária</h2>
+              </div>
+              <div class="flip-card-back">
+                <h2 class="card-title">Medicina Veterinária</h2>
+                <p class="card-description">Produtos veterinários de qualidade para cuidar da saúde do seu pet com toda segurança e eficácia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
 
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
