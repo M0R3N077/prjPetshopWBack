@@ -5,24 +5,29 @@
     width: 100%;
   }
   
-  .container {
-    max-width: 100%;
+  .products-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background-color: #FAF3E3;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    flex-direction: column;
   }
   
   /* Page title */
   .page-title {
     font-size: 5rem;
     font-weight: bold;
+    margin-bottom: 2.1rem;
     color: #000;
-    margin-bottom: 2.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-left: 150px;
+    padding-left: 80px;
+    font-family: 'Bree Serif', serif;
   }
   
   /* Card grid layout */
@@ -76,7 +81,7 @@
   /* Front of card */
   .flip-card-front {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 1.5rem;
     background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 40%);
     background-size: 300%;
@@ -124,9 +129,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.8);
     transform: rotateY(180deg);
+    margin-bottom: 20px;
   }
   
   /* Card content styling */
@@ -134,7 +140,23 @@
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     color: white !important;
-    font-size: 2rem !important;
+    font-size: 3rem !important;
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+  }
+
+  #aquary{
+    font-size: 44px!important;
+  }
+  .flip-card-front .card-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  #home .card-title{
+    padding-right: 160px !important;
   }
   
   .card-description {
@@ -142,11 +164,32 @@
     text-align: center;
     margin-top: 1rem;
     line-height: 1.5;
+    font-size: 25px;
+    font-family: "Poppins";
+    font-weight: 300;
   }
   
   /* Flip on hover */
   .flip-card-container:hover .flip-card {
     transform: rotateY(180deg);
+  }
+
+  .btn-products{
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #005D44;
+    color: white;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .btn-products:hover{
+    transform: scale(1.05);
   }
   
   /* Animations */

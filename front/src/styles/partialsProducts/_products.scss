@@ -1,0 +1,468 @@
+
+:root {
+    --primary-color: #005D44;
+    --secondary-color: #FEF6E9;
+    --accent-color: #F8ABC9;
+    --text-color: #004D40;
+    --button-color: #005D44;
+    --border-radius: 20px;
+    --box-shadow: 0px 8px 24px rgba(0, 93, 68, 0.1);
+  }
+    
+  #product-html {
+    scroll-behavior: smooth;
+  }
+  
+  #product-body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  #product-container, #product-hero-container, #product-categorias-container, #product-produtos-container, #product-footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  #product-header {
+    background: transparent;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+  }
+
+  #logo-product {
+    width: 350px; /* Defina o tamanho desejado */
+    height: auto; /* Mantém a proporção */
+    margin-left: 80px; /* Ajuste conforme necessário */
+  }
+
+  #logo-product-img{
+    width: 300px; /* Defina o tamanho desejado */
+    height: auto; /* Mantém a proporção */
+    margin-right: 50px;
+  }
+  
+  #product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #product-logo #product-logo-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  #product-logo-highlight {
+    color: var(--accent-color);
+    font-weight: 300;
+  }
+  
+  #product-nav {
+    display: flex;
+    justify-content: flex-end; /* Move os itens para a direita */
+  }
+  
+  #product-nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #product-nav-item-1, #product-nav-item-2, #product-nav-item-3, #product-nav-item-4 {
+    margin-left: 150px;
+  }
+  
+  #product-nav-link-home, #product-nav-link-produtos, #product-nav-link-sobre, #product-nav-link-contato {
+    color: white;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    font-size: 23px;
+  }
+  
+  #product-nav-link-home:hover,
+  #product-nav-link-home.active,
+  #product-nav-link-produtos:hover,
+  #product-nav-link-produtos.active,
+  #product-nav-link-sobre:hover,
+  #product-nav-link-sobre.active,
+  #product-nav-link-contato:hover,
+  #product-nav-link-contato.active {
+    color: var(--accent-color);
+  }
+  
+  #product-nav-link-home::after,
+  #product-nav-link-produtos::after,
+  #product-nav-link-sobre::after,
+  #product-nav-link-contato::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  #product-nav-link-home:hover::after,
+  #product-nav-link-home.active::after,
+  #product-nav-link-produtos:hover::after,
+  #product-nav-link-produtos.active::after,
+  #product-nav-link-sobre:hover::after,
+  #product-nav-link-sobre.active::after,
+  #product-nav-link-contato:hover::after,
+  #product-nav-link-contato.active::after {
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  #product-hero {
+    background: linear-gradient(rgba(0, 93, 68, 0.8), rgba(0, 93, 68, 0.8)), url('https://img.freepik.com/fotos-gratis/quatro-filhotes-de-golden-retriever-fofos-descansando-na-grama_181624-26268.jpg') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.795);
+  }
+  
+  #product-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #product-hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+    font-family: 'Bree Serif', serif;
+  }
+  
+  #product-hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+    font-family: 'Poppins';
+  }
+  
+  #product-hero-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 2s ease-out;
+  }
+  
+  #product-hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 93, 68, 0.2);
+  }
+  
+  /* Categories Section */
+  #product-categorias {
+    padding: 80px 0;
+    background-color: white;
+  }
+  
+  #product-section-title, #product-produtos-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  #product-section-title::after, #product-produtos-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #product-categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+  
+  #product-categoria-card-alimentacao, #product-categoria-card-brinquedos, #product-categoria-card-casinhas, #product-categoria-card-higiene, #product-categoria-card-medicina {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  #product-categoria-card-alimentacao:hover, #product-categoria-card-brinquedos:hover, #product-categoria-card-casinhas:hover, #product-categoria-card-higiene:hover, #product-categoria-card-medicina:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 93, 68, 0.15);
+  }
+  
+  #product-categoria-icon-1, #product-categoria-icon-2, #product-categoria-icon-3, #product-categoria-icon-4, #product-categoria-icon-5 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  #product-categoria-name-1, #product-categoria-name-2, #product-categoria-name-3, #product-categoria-name-4, #product-categoria-name-5 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  /* Products Section */
+  #product-produtos {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+  }
+  
+  #product-alimentacao, #product-brinquedos, #product-casinhas, #product-higiene, #product-medicina {
+    margin-bottom: 60px;
+  }
+  
+  #product-categoria-title-1, #product-categoria-title-2, #product-categoria-title-3, #product-categoria-title-4, #product-categoria-title-5 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  #product-grid-alimentacao, #product-grid-brinquedos, #product-grid-casinhas, #product-grid-higiene, #product-grid-medicina {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  [id^="product-card-"] {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  [id^="product-card-"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 93, 68, 0.15);
+  }
+  
+  [id^="product-img-"] {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  [id^="product-img-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  [id^="product-card-"]:hover [id^="product-img-"] img {
+    transform: scale(1.1);
+  }
+  
+  [id^="product-nome-"] {
+    font-size: 1.2rem;
+    padding: 15px 15px 5px;
+    color: var(--primary-color);
+  }
+  
+  [id^="product-desc-"] {
+    padding: 0 15px 10px;
+    color: #666;
+    font-size: 0.9rem;
+    height: 60px;
+  }
+  
+  [id^="product-preco-"] {
+    padding: 0 15px 15px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+  }
+  
+  [id^="product-btn-"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  [id^="product-btn-"]:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+  
+  /* Footer */
+  #product-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0 20px;
+  }
+  
+  #product-footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  #product-footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  #product-footer-title-highlight {
+    color: var(--accent-color);
+    font-weight: 300;
+  }
+  
+  #product-footer-links-title,
+  #product-footer-contact-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  #product-footer-links-title::after,
+  #product-footer-contact-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: -8px;
+    left: 0;
+  }
+  
+  #product-footer-link-item-1, #product-footer-link-item-2, #product-footer-link-item-3, #product-footer-link-item-4 {
+    margin-bottom: 10px;
+  }
+  
+  #product-footer-link-1, #product-footer-link-2, #product-footer-link-3, #product-footer-link-4 {
+    color: #ddd;
+  }
+  
+  #product-footer-link-1:hover, #product-footer-link-2:hover, #product-footer-link-3:hover, #product-footer-link-4:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+  }
+  
+  #product-footer-address, #product-footer-city, #product-footer-phone, #product-footer-email {
+    margin-bottom: 5px;
+    color: #ddd;
+  }
+  
+  #product-footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #product-nav-list {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    #product-nav-item-1, #product-nav-item-2, #product-nav-item-3, #product-nav-item-4 {
+      margin: 10px 0;
+    }
+    
+    #product-hero-title {
+      font-size: 2rem;
+    }
+    
+    #product-categoria-grid,
+    #product-grid-alimentacao, #product-grid-brinquedos, #product-grid-casinhas, #product-grid-higiene, #product-grid-medicina {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    #product-footer-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    #product-footer-links-title::after,
+    #product-footer-contact-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #product-container {
+      flex-direction: column;
+    }
+    
+    #product-logo {
+      margin-bottom: 15px;
+    }
+    
+    #product-hero {
+      height: 60vh;
+    }
+    
+    #product-hero-title {
+      font-size: 1.8rem;
+    }
+    
+    #product-grid-alimentacao, #product-grid-brinquedos, #product-grid-casinhas, #product-grid-higiene, #product-grid-medicina {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -3,56 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agendamento</title>
+  <title>Agendamento de Pet Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
-<body id="login-body">
-  <div class="container">
-      <h1 id="title-scheduling">Agendamento</h1>
-      <div class="form-horizontal">
-        <div class="calendar-section">
-          <div class="month-selector">
-            <button id="prev-month">&lt;</button>
-            <span id="current-month-year"></span>
-            <button id="next-month">&gt;</button>
-          </div>
-          <table class="calendar">
-            <thead>
-              <tr>
-                <th>DOM</th><th>SEG</th><th>TER</th><th>QUA</th><th>QUI</th><th>SEX</th><th>SÁB</th>
-              </tr>
-            </thead>
-            <tbody id="calendar-body">
-              <!-- Aqui será gerado o calendário via JS -->
-            </tbody>
-          </table>
-        </div>
+<body id="body-scheduling">
 
-        <div class="form-section">
-            <h2 class="time-title">Qual é o melhor horário para você?</h2>
-          <div class="time-slots">
-            <button class="time-slot-btn">10:00</button>
-            <button class="time-slot-btn">10:30</button>
-            <button class="time-slot-btn">13:00</button>
-            <button class="time-slot-btn">18:30</button>
+  <div class="scheduling-screen">
+    <div class="scheduling-container">
+      <div class="paw-icon">
+        <img src="../../public/assets/imgs/logoPata.png" alt="Paw icon" id="paw-icon">
+      </div>
+      
+      <div class="scheduling-content">
+        <h1 class="scheduling-title">Agendamento</h1>
+        
+        <div class="scheduling-form">
+          <div class="calendar-section">
+            <div class="month-navigator">
+              <span class="nav-arrow" id="prevMonth">&lt;</span>
+              <span class="current-month" id="currentMonthYear">Outubro</span>
+              <span class="nav-arrow" id="nextMonth">&gt;</span>
+            </div>
+            
+            <div class="calendar-grid" id="calendarGrid">
+              <!-- Days of week and calendar will be inserted here by JavaScript -->
+            </div>
           </div>
-          <div class="service-selection">
-            <h2>Qual Serviço você deseja:</h2>
-            <input type="text" id="service-input" placeholder="Exemplo: banho, tosa...">
-          </div>
-          <div class="confirm-area">
-            <p id="selected-info">Nenhuma seleção feita.</p>
-            <button class="submit-btn" id="submit-btn">ENVIAR</button>
+          
+          <div class="booking-section">
+            <h2 class="section-title">Qual é o melhor horário para você?</h2>
+            
+            <div class="time-selection" id="timeSelection">
+              <button type="button" class="time-slot" data-time="10:00">10:00</button>
+              <button type="button" class="time-slot" data-time="10:30">10:30</button>
+              <button type="button" class="time-slot" data-time="13:00">13:00</button>
+              <button type="button" class="time-slot" data-time="18:30">18:30</button>
+            </div>
+            
+            <div class="service-selection">
+              <h2 class="section-title">Qual serviço você deseja?</h2>
+              <div class="select-wrapper">
+                <select id="serviceSelect" class="service-select">
+                  <option value="">Selecione um serviço</option>
+                  <option value="Banho e Tosa">Banho e Tosa</option>
+                  <option value="Hospedagem">Hospedagem</option>
+                  <option value="Consulta Veterinária">Consulta Veterinária</option>
+                </select>
+              </div>
+            </div>
+            <div class="confirm-area">
+              <p id="selected-info">Nenhuma seleção feita.</p>
+              <button id="submitButton" class="submit-button" disabled>ENVIAR</button>
+            </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
-  <script src="../scripts/scheduling.js"></script>
+
+  <script src="../../src/scripts/scheduling.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

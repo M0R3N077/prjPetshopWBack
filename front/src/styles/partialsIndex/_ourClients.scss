@@ -1,0 +1,57 @@
+
+/* Seção de Clientes */
+#nossos-clientes {
+    padding: 40px;
+    background-color: #015649;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo-clientes {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.clientes-slider {
+    width: 100%;
+    padding: 40px !important;
+    height: 500px;
+    background-color: transparent;
+}
+
+.swiper-clients{
+    height: 400px !important;
+    padding: auto !important;
+    width: 100% !important;
+}
+
+/* Slider */
+.clientes-slider {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Cada imagem do slide */
+.card-cliente {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px !important;
+}
+
+.imagem-cliente {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Para cobrir todo o espaço */
+}

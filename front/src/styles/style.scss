@@ -8,6 +8,10 @@ li{
     list-style: none;
 }
 
+a{
+    color: white;
+}
+
 
 @import './partialsIndex/header';
 @import './partialsIndex/heroSection';
@@ -18,4 +22,10 @@ li{
 @import './partialsIndex/carouselSection';
 @import './partialsLogin/login';
 @import './partialsScheduling/scheduling';
-@import './partialsIndex/products'
+@import './partialsIndex/products';
+@import './partialsIndex/categoriesSection';
+@import './partialsFavorites/favorites';
+@import './partialsProducts/products';
+@import './partialsShopping/shopping';
+@import './partialsIndex/promotions';
+@import './partialsIndex/ourClients';

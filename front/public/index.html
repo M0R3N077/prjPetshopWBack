@@ -14,7 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="carousel">
@@ -44,12 +46,12 @@
         <li class="elements-list-icons" id="profile"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
           </svg></li>
-        <li class="elements-list-icons" id="fvorites" ><svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"  fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-          </svg></li>
-        <li class="elements-list-icons"  id="shopping"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-          </svg></li>
+        <li  class="elements-list-icons" id="fvorites"><a href="../src/pages/favorites.html"><svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"  fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+        </svg></a></li>
+        <li class="elements-list-icons"  id="shopping"> <a href="../src/pages/shopping.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg></a></li>
         </div>
     </ul>
 </header>
@@ -178,8 +180,8 @@
 </section>
 
 <section class="products">
-<div class="container">
-    <h1 class="page-title">Produtos</h1>
+<div class="products-container">
+    <h2 class="page-title">Produtos</h2>
     <div class="cards-container">
       <div class="cards-row">
         <div class="card-wrapper">
@@ -191,6 +193,7 @@
               <div class="flip-card-back">
                 <h2 class="card-title">Alimentação</h2>
                 <p class="card-description">Produtos de alta qualidade para a alimentação do seu pet, com nutrientes essenciais para saúde e bem-estar.</p>
+                <button onclick="window.location.href='../src/pages/products.html'" class="btn-products">Conferir Produtos</button>
               </div>
             </div>
           </div>
@@ -205,6 +208,7 @@
               <div class="flip-card-back">
                 <h2 class="card-title">Brinquedos</h2>
                 <p class="card-description">Brinquedos divertidos e seguros para entreter seu pet e estimular sua atividade física e mental.</p>
+                <button onclick="window.location.href='../src/pages/products.html'" class="btn-products">Conferir Produtos</button>
               </div>
             </div>
           </div>
@@ -214,11 +218,12 @@
           <div class="flip-card-container">
             <div class="flip-card">
               <div class="flip-card-front" id="home" style="background-position: 66% 30%;">
-                <h2 class="card-title">Casinhas e aquários</h2>
+                <h2 id="aquary" class="card-title">Casinhas e aquários</h2>
               </div>
               <div class="flip-card-back">
                 <h2 class="card-title">Casinhas e aquários</h2>
                 <p class="card-description">Ambientes confortáveis e seguros para seu pet, projetados com os melhores materiais e acabamentos.</p>
+                <button onclick="window.location.href='../src/pages/products.html'" class="btn-products">Conferir Produtos</button>
               </div>
             </div>
           </div>
@@ -235,6 +240,7 @@
               <div class="flip-card-back">
                 <h2 class="card-title">Higiene e limpeza</h2>
                 <p class="card-description">Produtos especializados para manter seu pet limpo e saudável, com fórmulas suaves e eficientes.</p>
+                <button onclick="window.location.href='../src/pages/products.html'" class="btn-products">Conferir Produtos</button>
               </div>
             </div>
           </div>
@@ -249,12 +255,126 @@
               <div class="flip-card-back">
                 <h2 class="card-title">Medicina Veterinária</h2>
                 <p class="card-description">Produtos veterinários de qualidade para cuidar da saúde do seu pet com toda segurança e eficácia.</p>
+                <button onclick="window.location.href='../src/pages/products.html'" class="btn-products">Conferir Produtos</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="categories">
+  <h2 class="categories-title">Categorias</h2>
+  <div class="categories-container">
+    <ul class="categories-animals">
+      <li class="animal" id="cats">
+        <img src="./assets/imgs/imgsCategories/cat.png" alt="Gato" class="animal-img" id="cat-img">
+        <div class="animal-name"><h3>Gatos</h3></div>
+      </li>
+      <li class="animal" id="dogs">
+        <img src="./assets/imgs/imgsCategories/dog.png" alt="Cão" class="animal-img" id="dog-img">
+        <div class="animal-name"><h3>Cães</h3></div>
+      </li>
+      <li class="animal" id="rabbits">
+        <img src="./assets/imgs/imgsCategories/rabbit.png" alt="Coelho" class="animal-img" id="rabbit-img">
+        <div class="animal-name"><h3>Coelhos</h3></div>
+      </li>
+      <li class="animal" id="birds">
+        <img src="./assets/imgs/imgsCategories/bird.png" alt="Ave" class="animal-img" id="bird-img">
+        <div class="animal-name"><h3>Aves</h3></div>
+      </li>
+      <li class="animal" id="fishes">
+        <img src="./assets/imgs/imgsCategories/fish.png" alt="Peixe" class="animal-img" id="fish-img">
+        <div class="animal-name"><h3>Peixes</h3></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="promocoes">
+  <h2 class="titulo-promocoes">Promoções</h2>
+  <div class="swiper promo-slider">
+      <div class="swiper-wrapper">
+          <!-- Produto 1 -->
+          <div class="swiper-slide card-produto">
+            <div class="produto-img-container">
+              <img src="https://imgs.search.brave.com/aSqL4zstpr3TyNYd07CVwaCEfr22MQEncxaT1aLG41o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vU19RX05QXzJY/Xzc1MTE4OS1NTEE4/MjQ4MTU4ODk1N18w/MjIwMjUtVi53ZWJw" alt="Ração Pedigree adulto" class="produto-imagem">
+          </div>
+              <p class="produto-nome">Ração Pedigree adulto</p>
+              <p class="desconto">-17%</p>
+              <p class="preco">R$ <span>94,90</span></p>
+          </div>
+          <!-- Produto 2 -->
+          <div class="swiper-slide card-produto">
+            <div class="produto-img-container">
+              <img src="https://imgs.search.brave.com/FnL9k3C6K9ai5j0bykhmFGfQ91OqceY2UzEJOVjuKnU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/LXN0YXRpYy5wZXRs/b3ZlLmNvbS5ici93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/Ny9tb3JkZWRvci1m/aWxob3RlLXBldGxv/dmUuanBn" alt="Ração Pedigree adulto" class="produto-imagem">
+          </div>
+              <p class="produto-nome">Mordedor Kroco Recheável</p>
+              <p class="desconto">-25%</p>
+              <p class="preco">R$ <span>14,18</span></p>
+          </div>
+          <!-- Produto 3 -->
+          <div class="swiper-slide card-produto">
+            <div class="produto-img-container">
+              <img src="https://imgs.search.brave.com/8RYPtXcRNoPUkCXxuOUIuJtYdvHDdA_lz1PBu9cx_P4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hLXN0/YXRpYy5tbGNkbi5j/b20uYnIvMjgweDIx/MC9yYWNhby1zZWNh/LWJhbGFuY2UtY2Fy/bmUtZS12ZWdldGFp/cy1wYXJhLWNhZXMt/YWR1bHRvcy1kZS1y/YWNhcy1tZWRpYXMt/ZS1ncmFuZGVzLTEt/a2cvcGV0bG92ZW9m/aWNpYWwvMjUwMTMw/My8xNWU2NWRiZjgz/N2I1M2Y2MzU3ZGY1/ZDE4YTY5NzNmZC5q/cGVn" alt="Ração Pedigree adulto" class="produto-imagem">
+          </div>
+              <p class="produto-nome">Ração Úmida Balance</p>
+              <p class="desconto">-15%</p>
+              <p class="preco">R$ <span>2,55</span></p>
+          </div>
+          <!-- Produto 4 -->
+          <div class="swiper-slide card-produto">
+            <div class="produto-img-container">
+              <img src="https://imgs.search.brave.com/TlBOJHcLB2mfSuaRG-ZuscWv6q5_jabDcPAhNShNopI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzMwMHgzMDAvMTc4/Ni8xNzg2ODMxL3By/b2R1dG8vMjI5MTY1/MTgwL3N1cGxlbWVu/dG9fdml0YW0tbmlj/b192ZXRfZmFybW9z/X2hlcGF0b2NpbF9w/ZXRfcGFyYV9jLWVz/X2VfZ2F0b3NfMS13/NjhyajRqeWZ4Lmpw/Zw" alt="Ração Pedigree adulto" class="produto-imagem">
+          </div>
+              <p class="produto-nome">Suplemento Vitamínico GeriCat</p>
+              <p class="desconto">-25%</p>
+              <p class="preco">R$ <span>28,88</span></p>
+          </div>
+          <!-- Produto 5 -->
+          <div class="swiper-slide card-produto">
+            <div class="produto-img-container">
+              <img src="https://imgs.search.brave.com/W2N3s6YfINLcVd2l5orJ5fOyyr91GdWaMjtNnDYDoSE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGlwZXJ6b28uY29t/LmJyL21lZGlhL3By/b2R1dG9zL0FxdWFy/aW9DdXJ2b180MDB4/NDAwLmpwZw" alt="Ração Pedigree adulto" class="produto-imagem">
+          </div>
+            <p class="produto-nome">Aquário 5L</p>
+            <p class="desconto">-35%</p>
+            <p class="preco">R$ <span>20,00</span></p>
+        </div>
+        <!-- Produto 6 -->
+        <div class="swiper-slide card-produto">
+          <div class="produto-img-container">
+            <img src="https://imgs.search.brave.com/Xs9tsA98EHQndQ_0D4pFtCqDxWwYBvqpIIpaCkLV8FU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGNkbi5jb20u/YnIvaW1nL2ltZ19w/cm9kLzkyODk3OS8x/ODBfZ2Fpb2xhX2dv/aWFuYV9sdXhvX242/XzE5MjVfMV9kYTc4/NDRhMGFiYWNhMzI3/MWMzNjRiZmQ3YzQx/OWQyMC5qcGc" alt="Ração Pedigree adulto" class="produto-imagem">
+        </div>
+            <p class="produto-nome">Gaiola</p>
+            <p class="desconto">-15%</p>
+            <p class="preco">R$ <span>90,00</span></p>
+        </div>
+  </div>
+  <!-- Botões de navegação -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</section>
+
+<section id="nossos-clientes">
+  <h2 class="titulo-clientes">Nossos clientes</h2>
+  <div class="swiper clientes-slider">
+      <div class="swiper-wrapper swiper-clients">
+          <!-- Imagem 1 -->
+          <div class="swiper-slide card-cliente">
+              <img src="img/cliente1.jpg" alt="Cliente 1" class="imagem-cliente">
+          </div>
+          <!-- Imagem 2 -->
+          <div class="swiper-slide card-cliente">
+              <img src="img/cliente2.jpg" alt="Cliente 2" class="imagem-cliente">
+          </div>
+          <!-- Imagem 3 -->
+          <div class="swiper-slide card-cliente">
+              <img src="img/cliente3.jpg" alt="Cliente 3" class="imagem-cliente">
+          </div>
+      </div>
   </div>
 </section>
 

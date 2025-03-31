@@ -104,3 +104,34 @@ const cards = document.querySelectorAll('.card-wrapper');
       card.style.opacity = '1';
     }, 100 * index);
   });
+
+
+
+  /// Inicializa Swiper.js para a seção de promoções
+const promoSwiper = new Swiper('.promo-slider', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        1024: { slidesPerView: 4 },
+        768: { slidesPerView: 2 },
+        480: { slidesPerView: 1 },
+    },
+    loop: true,
+});
+
+// Swiper para "Nossos Clientes"
+const clientesSwiper = new Swiper(".clientes-slider", {
+    slidesPerView: 1, // Mantém a imagem centralizada e mostra as laterais
+    spaceBetween: 20, // Espaço entre as imagens
+    centeredSlides: true, // Mantém a imagem do meio centralizada
+    loop: true, // Loop infinito sem bugs
+    autoplay: {
+        delay: 3000, // Troca de imagem a cada 3 segundos
+        disableOnInteraction: false, // Continua mesmo se o usuário interagir
+    },
+    grabCursor: true, // Mostra o cursor de "mãozinha"
+});

@@ -1,0 +1,49 @@
+.categories{
+    min-height: 65vh;
+    background-color: #fdf3e7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.categories-title{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 80px;
+    font-family: 'Bree Serif', serif;
+}
+
+.categories-conatiner{
+    width: 100%;
+}
+
+.categories-animals{
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px
+}
+
+#cats{
+    margin-bottom: 15px;
+}
+
+#birds{
+    margin-top: 28px;
+}
+
+.animal-name{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Poppins';
+    font-weight: 200;
+}
