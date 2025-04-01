@@ -1,0 +1,109 @@
+footer {
+    background-color: #FAF3E3;
+    color: #015649;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #015649;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.footer-section p, 
+.footer-section a {
+    font-size: 14px;
+    color: #015649;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #7ec200; /* Um tom mais claro para realce */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #FAF3E3;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #7ec200;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    
+}
+
+.download-buttons img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.download-buttons img:hover {
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .download-buttons {
+        justify-content: center;
+    }
+}

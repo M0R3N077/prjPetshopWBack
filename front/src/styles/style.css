@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@ li {
   list-style: none;
 }
 
-a {
+li a {
   color: white;
 }
 
@@ -28,7 +27,7 @@ header {
 #header-list {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 80px;
   justify-content: space-between;
   align-items: center;
   color: white;
@@ -669,6 +668,7 @@ header {
   color: white;
   font-size: 23px;
   border: none;
+  cursor: pointer;
 }
 
 #body-page {
@@ -1883,60 +1883,173 @@ ul {
   justify-content: center;
 }
 
-/* Seção de Clientes */
-#nossos-clientes {
-  padding: 40px;
-  background-color: #015649;
+#our-clients {
+  background-color: #004d40;
+  color: white;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-}
-
-.titulo-clientes {
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.clientes-slider {
-  width: 100%;
-  padding: 40px !important;
-  height: 500px;
-  background-color: transparent;
-}
-
-.swiper-clients {
-  height: 400px !important;
-  padding: auto !important;
-  width: 100% !important;
-}
-
-/* Slider */
-.clientes-slider {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-/* Cada imagem do slide */
-.card-cliente {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px !important;
+}
+#our-clients h2 {
+  margin-top: 30px;
+  font-family: "Bree Serif", serif;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-.imagem-cliente {
+.slider-container {
+  position: relative;
+  max-width: 55%;
+  max-height: 30%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+img {
   width: 100%;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover; /* Para cobrir todo o espaço */
+  height: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 101, 32, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+}
+
+.prev {
+  left: 10px;
+  visibility: visible;
+}
+
+.next {
+  right: 10px;
+  visibility: visible;
+}
+
+footer {
+  background-color: #FAF3E3;
+  color: #015649;
+  padding: 40px 0;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #015649;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #015649;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #7ec200; /* Um tom mais claro para realce */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #FAF3E3;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #7ec200;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.download-buttons img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.download-buttons img:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .download-buttons {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */

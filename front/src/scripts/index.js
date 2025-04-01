@@ -123,15 +123,11 @@ const promoSwiper = new Swiper('.promo-slider', {
     loop: true,
 });
 
-// Swiper para "Nossos Clientes"
-const clientesSwiper = new Swiper(".clientes-slider", {
-    slidesPerView: 1, // Mantém a imagem centralizada e mostra as laterais
-    spaceBetween: 20, // Espaço entre as imagens
-    centeredSlides: true, // Mantém a imagem do meio centralizada
-    loop: true, // Loop infinito sem bugs
-    autoplay: {
-        delay: 3000, // Troca de imagem a cada 3 segundos
-        disableOnInteraction: false, // Continua mesmo se o usuário interagir
-    },
-    grabCursor: true, // Mostra o cursor de "mãozinha"
-});
+// Slider para "Nossos Clientes"
+let index = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll(".slide");
+            index = (index + step + slides.length) % slides.length;
+            document.getElementById("slider").style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(() => moveSlide(1), 3000);
