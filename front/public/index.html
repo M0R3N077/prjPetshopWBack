@@ -35,7 +35,7 @@
     </div>
     </div>
     
-<header>
+<header id="header-index">
     <ul id="header-list">
         <li ><img class="logo" src="./assets/imgs/logoPetshop.png" alt="Logo do petshop"></li>
         <li class="elements-list"><a href="#who-are-we">SOBRE NÓS</a></li>
@@ -44,9 +44,9 @@
         <li class="elements-list"><a href="../src/pages/login.html">LOGIN</a></li>
         </ul>
         <ul id="header-icons">
-        <li class="elements-list-icons" id="profile"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+        <li class="elements-list-icons" id="profilee"><a href="../src/pages/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-          </svg></li>
+          </svg></a></li>
         <li  class="elements-list-icons" id="fvorites"><a href="../src/pages/favorites.html"><svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"  fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
           <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
         </svg></a></li>
@@ -307,6 +307,7 @@
               <p class="produto-nome">Ração Pedigree adulto</p>
               <p class="desconto">-17%</p>
               <p class="preco">R$ <span>94,90</span></p>
+              <button id="product-btn-20" class="btn-produto bt-pr">Adicionar ao Carrinho</button>
           </div>
           <!-- Produto 2 -->
           <div class="swiper-slide card-produto">
@@ -316,15 +317,17 @@
               <p class="produto-nome">Mordedor Kroco Recheável</p>
               <p class="desconto">-25%</p>
               <p class="preco">R$ <span>14,18</span></p>
+              <button id="product-btn-20" class="btn-produto bt-pr">Adicionar ao Carrinho</button>
           </div>
           <!-- Produto 3 -->
           <div class="swiper-slide card-produto">
             <div class="produto-img-container">
-              <img src="https://imgs.search.brave.com/8RYPtXcRNoPUkCXxuOUIuJtYdvHDdA_lz1PBu9cx_P4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hLXN0/YXRpYy5tbGNkbi5j/b20uYnIvMjgweDIx/MC9yYWNhby1zZWNh/LWJhbGFuY2UtY2Fy/bmUtZS12ZWdldGFp/cy1wYXJhLWNhZXMt/YWR1bHRvcy1kZS1y/YWNhcy1tZWRpYXMt/ZS1ncmFuZGVzLTEt/a2cvcGV0bG92ZW9m/aWNpYWwvMjUwMTMw/My8xNWU2NWRiZjgz/N2I1M2Y2MzU3ZGY1/ZDE4YTY5NzNmZC5q/cGVn" alt="Ração Pedigree adulto" class="produto-imagem">
+              <img src="https://www.petlove.com.br/images/products/273922/product/31027530931_Ra%C3%A7%C3%A3o_%C3%9Amida_Balance_Cordeiro_e_Vegetais_ao_Molho_para_C%C3%A3es_Adultos_%281%29.jpg?1695739510" alt="Ração Pedigree adulto" class="produto-imagem">
           </div>
               <p class="produto-nome">Ração Úmida Balance</p>
               <p class="desconto">-15%</p>
               <p class="preco">R$ <span>2,55</span></p>
+              <button id="product-btn-20" class="btn-produto bt-pr">Adicionar ao Carrinho</button>
           </div>
           <!-- Produto 4 -->
           <div class="swiper-slide card-produto">
@@ -334,6 +337,7 @@
               <p class="produto-nome">Suplemento Vitamínico GeriCat</p>
               <p class="desconto">-25%</p>
               <p class="preco">R$ <span>28,88</span></p>
+              <button id="product-btn-20" class="btn-produto bt-pr">Adicionar ao Carrinho</button>
           </div>
           <!-- Produto 5 -->
           <div class="swiper-slide card-produto">
@@ -343,6 +347,7 @@
             <p class="produto-nome">Aquário 5L</p>
             <p class="desconto">-35%</p>
             <p class="preco">R$ <span>20,00</span></p>
+            <button id="product-btn-20" class="btn-produto bt-pr">Adicionar ao Carrinho</button>
         </div>
         <!-- Produto 6 -->
         <div class="swiper-slide card-produto">
@@ -352,6 +357,7 @@
             <p class="produto-nome">Gaiola</p>
             <p class="desconto">-15%</p>
             <p class="preco">R$ <span>90,00</span></p>
+            <button id="product-btn-20" class="btn-produto bt-pr">Adicionar ao Carrinho</button>
         </div>
   </div>
   <!-- Botões de navegação -->
@@ -364,11 +370,13 @@
     <div class="slider-container">
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <div class="slider" id="slider">
-            <div class="slide"><img src="https://media.gettyimages.com/id/1073307172/pt/foto/groomer-drying-dog-in-pet-salon.jpg?s=612x612&w=0&k=20&c=0kNQEmPVg6tdJbUH6I5igT_NP2J_81OmPhbZlk_whw4=" alt="Cliente 1"></div>
-            <div class="slide"><img src="https://media.gettyimages.com/id/639321736/pt/foto/this-one-loves-the-groomers.jpg?s=612x612&w=0&k=20&c=tHYupdmdkXiqpznN5Re7xIavPQn2fDFHY7kSEr-Bwu4=" alt="Cliente 2"></div>
-            <div class="slide"><img src="https://media.gettyimages.com/id/1437553074/pt/foto/hairdresser-with-border-collie-dog-at-the-dog-salon.jpg?s=612x612&w=0&k=20&c=-l8i63TZ4F7xmMGlsVk5SaeLFXMVpGjnea5jnPLfq_Q=" alt="Cliente 3"></div>
-            <div class="slide"><img src="https://media.gettyimages.com/id/1166663573/pt/foto/woman-holding-pet-dog-while-shopping-in-pet-store.jpg?s=612x612&w=0&k=20&c=R_4nlrZMO6xLqpvLikIuZxoQ4ArbMD4G1UtfXcXet9U=" alt="Cliente 4"></div>
-            <div class="slide"><img src="https://media.gettyimages.com/id/2151161737/pt/foto/close-up-of-a-veterinarians-hands-petting-a-french-bulldog-in-an-animal-clinic.jpg?s=612x612&w=0&k=20&c=R0vko8JMgbjxmk7NY24yLqHMEkyxfjjsOAC-8c4MaLQ=" alt="Cliente 5"></div>
+            <div class="slide"><img src="https://nfpet.com.br/blog/wp-content/uploads/2021/10/19-10_blog-1-750x410.png" alt="Cliente 1"></div>
+            <div class="slide"><img src="https://nfpet.com.br/blog/wp-content/uploads/2020/10/Fachadas-de-pet-shop-750x410.png" alt="Cliente 2"></div>
+            <div class="slide"><img src="https://www.roar.com.br/wp-content/uploads/2021/06/os-melhores-brindes-para-clientes-do-mercado-pet-1.jpg" alt="Cliente 3"></div>
+            <div class="slide"><img src="https://vetus.com.br/universidade/wp-content/uploads/2023/08/como-engajar-a-equipe-do-pet-shop-e-clinica-veterinaria.jpg" alt="Cliente 4"></div>
+            <div class="slide"><img src="https://wp-prod-images.simples.vet/wp-content/uploads/2022/11/PR-Porta%CC%83o-00036-1-1.jpg" alt="Cliente 5"></div>
+            <div class="slide"><img src="https://media.istockphoto.com/id/1301071009/pt/foto/portrait-of-man-with-beloved-dog-in-pet-shop.jpg?s=612x612&w=0&k=20&c=2-J7Qfsr_IPXAQvW9WkwN1hguFt1RJuKcOZZKxFckP8=" alt="Cliente 6"></div>
+
         </div>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>

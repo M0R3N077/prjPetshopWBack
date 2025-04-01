@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+  <div id="cartPage">
+    <div id="cartContainer">
+      <!-- Header do carrinho -->
+      <div id="cartHeader">
+        <h1><i class="fa-solid fa-cart-shopping"></i> Seu Carrinho</h1>
+        <p>Revise seus itens antes de finalizar a compra</p>
+      </div>
+
+      <div id="cartContent">
+        <!-- Itens do carrinho -->
+        <div id="cartItems">
+          <!-- Os itens serão inseridos pelo JavaScript -->
+        </div>
+
+        <!-- Resumo do pedido -->
+        <div id="cartSummary">
+          <h2>Resumo do Pedido</h2>
+          
+          <div id="summaryDetails">
+            <div id="subtotalRow">
+              <span>Subtotal</span>
+              <span id="subtotalValue">R$0,00</span>
+            </div>
+            
+            <div id="shippingRow">
+              <span>Frete</span>
+              <span id="shippingValue">R$0,00</span>
+            </div>
+            
+            <div id="totalRow">
+              <span>Total</span>
+              <span id="totalValue">R$0,00</span>
+            </div>
+          </div>
+          
+          <button id="checkoutBtn">Finalizar Compra</button>
+          <a id="continueShoppingBtn" href="../pages/products.html"><i class="fa-solid fa-arrow-left"></i> Continuar Comprando</a>
+        </div>
+      </div>
+
+      <!-- Template para item vazio -->
+      <div id="emptyCart" style="display: none;">
+        <div id="emptyCartIcon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h2>Seu carrinho está vazio</h2>
+        <p>Parece que você ainda não adicionou nenhum item ao seu carrinho</p>
+        <a href="../pages/products.html" id="emptyCartBtn">Continuar Comprando</a>
+      </div>
+    </div>
+  </div>
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module" id="cart-select-script"></script>
+  <script src="../../src/scripts/cart.js"></script>
 </body>
 </html>

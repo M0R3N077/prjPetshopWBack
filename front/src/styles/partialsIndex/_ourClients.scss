@@ -10,10 +10,11 @@
     align-items: center;
 
     h2{
-        margin-top: 30px;
+        margin-top: 60px;
         font-family: 'Bree Serif', serif;   
         font-size: 3rem;
         font-weight: bold;
+        margin-bottom: -70px;
        
     }
 }
@@ -31,10 +32,12 @@
 .slide {
     min-width: 100%;
 }
-img {
+.slide img {
     width: 100%;
-    height: auto;
+    max-height: 450px;
+    object-fit: cover;
 }
+
 .prev, .next {
     position: absolute;
     top: 50%;

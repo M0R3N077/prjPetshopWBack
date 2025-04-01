@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Cliente</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<body id="profile-body">
+    <div id="profile-container">
+        <header id="profile-header">
+          <h1 id="profile-title">Perfil do Cliente</h1>
+          <button id="profile-logout-btn" class="profile-button">
+            <a href="../../public/index.html" style="text-decoration: none; color: inherit;">
+              <span id="profile-logout-icon"></span>Sair
+          </a>
+          </button>
+        </header>
+
+    <div id="profile-info-container">
+      <div id="profile-avatar-container">
+        <img id="profile-avatar" src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" alt="Foto de perfil">
+        <button id="profile-edit-avatar-btn">
+          <span id="profile-edit-icon"></span>
+        </button>
+        <input type="file" id="profile-avatar-input" accept="image/*" style="display: none;">
+      </div>
+      
+      <div id="profile-details-container">
+        <div id="profile-name-section" class="profile-detail-section">
+          <h2 id="profile-name">João Silva</h2>
+          <button id="profile-edit-name-btn" class="profile-edit-btn">
+            <span class="profile-pencil-icon"></span>
+          </button>
+        </div>
+        
+        <div id="profile-email-section" class="profile-detail-section">
+          <span id="profile-email-label" class="profile-label">Email</span>
+          <span id="profile-email">joao.silva@email.com</span>
+          <button id="profile-edit-email-btn" class="profile-edit-btn">
+            <span class="profile-pencil-icon"></span>
+          </button>
+        </div>
+        
+        <div id="profile-phone-section" class="profile-detail-section">
+          <span id="profile-phone-label" class="profile-label">Telefone</span>
+          <span id="profile-phone">(11) 98765-4321</span>
+          <button id="profile-edit-phone-btn" class="profile-edit-btn">
+            <span class="profile-pencil-icon"></span>
+          </button>
+        </div>
+        
+        <div id="profile-address-section" class="profile-detail-section">
+          <span id="profile-address-label" class="profile-label">Endereço</span>
+          <span id="profile-address">Rua das Flores, 123 - São Paulo</span>
+          <button id="profile-edit-address-btn" class="profile-edit-btn">
+            <span class="profile-pencil-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="profile-pets-container">
+      <h2 id="profile-pets-title">Meus Pets</h2>
+      
+      <div id="profile-pets-list">
+        <div class="profile-pet-card" data-pet-id="1">
+          <img class="profile-pet-image" src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6" alt="Rex">
+          <div class="profile-pet-info">
+            <h3 class="profile-pet-name">Rex</h3>
+            <p class="profile-pet-breed">Golden Retriever</p>
+            <p class="profile-pet-age">3 anos</p>
+          </div>
+          <button class="profile-edit-pet-btn profile-edit-btn">
+            <span class="profile-pencil-icon"></span>
+          </button>
+        </div>
+        
+        <div id="profile-add-pet-card">
+          <button id="profile-add-pet-btn">
+            <span id="profile-add-icon"></span>
+            <span id="profile-add-text">Adicionar Pet</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="profile-edit-modal" class="profile-modal">
+    <div id="profile-modal-content">
+      <h2 id="profile-modal-title">Editar Informação</h2>
+      <form id="profile-edit-form">
+        <!-- Campos para edição simples -->
+        <div id="profile-form-group">
+          <label id="profile-form-label" for="profile-edit-input"></label>
+          <input id="profile-edit-input" type="text">
+        </div>
+        
+        <!-- Campos para edição de pet -->
+        <div id="profile-pet-form-group" style="display: none;">
+          <div class="profile-pet-input-group">
+            <label for="profile-pet-name-input">Nome do Pet</label>
+            <input id="profile-pet-name-input" type="text" placeholder="Nome do pet">
+          </div>
+          <div class="profile-pet-input-group">
+            <label for="profile-pet-breed-input">Raça</label>
+            <input id="profile-pet-breed-input" type="text" placeholder="Raça do pet">
+          </div>
+          <div class="profile-pet-input-group">
+            <label for="profile-pet-age-input">Idade (anos)</label>
+            <input id="profile-pet-age-input" type="number" min="0" placeholder="Idade do pet">
+          </div>
+        </div>
+        
+        <div id="profile-modal-buttons">
+          <button id="profile-cancel-btn" type="button">Cancelar</button>
+          <button id="profile-save-btn" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module" id="profile-select-script"></script>
+  <script src="../../src/scripts/profile.js"></script>
+</body>
+</html>

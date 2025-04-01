@@ -11,7 +11,7 @@
 .paw {
     width: 150px; 
     position: absolute;
-    top: 85px; 
+    top: 102px; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -32,7 +32,7 @@
     justify-content: flex-start;
 }
 
-.title {
+#title-cadastro{
     color: #134A3A;
     font-family: 'Bree Serif', serif;
     font-weight: 700;
@@ -62,4 +62,20 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
     height: 50px;
+}
+
+#btn-cadastrar-signup{
+    background-color: #134A3A;
+    color: white;
+    border: none;
+    padding: 10px 185px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#btn-cadastrar-signup:hover {
+    background-color: #134a3ac9;
 }
